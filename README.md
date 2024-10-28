@@ -1,1 +1,1 @@
-# redux-toolkit-boilerplate
+# Next.js Project to Bootstrap ReduxToolkit
