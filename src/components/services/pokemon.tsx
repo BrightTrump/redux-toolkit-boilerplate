@@ -1,4 +1,4 @@
-import { useGetPokemonByNameQuery } from "../apis/pokemon.api";
+import { useGetPokemonByNameQuery } from "../../apis/pokemon.api";
 
 export default function Pokemon() {
   // Using a query hook to automatically fetches data and returns query values
