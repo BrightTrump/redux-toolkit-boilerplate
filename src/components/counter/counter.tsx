@@ -5,13 +5,18 @@ import { decrement, increment } from "../../store/slices/counterSlice";
 export default function Counter() {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(increment());
+  };
+
   return (
     <>
       <div>
         <button
           className="bg-gray-600 text-white p-2 rounded-md text-[1.2em] mr-3 hover:bg-black"
           aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+          onClick={handleClick}
         >
           Increment
         </button>
