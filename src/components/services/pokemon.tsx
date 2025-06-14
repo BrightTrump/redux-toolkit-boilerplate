@@ -6,7 +6,7 @@ export default function Pokemon() {
   return (
     <div className="App">
       {error ? (
-        <>Oh no, there was an error</>
+        <div className="text-red-500">An unexpected error occured</div>
       ) : isLoading ? (
         <>Loading...</>
       ) : data ? (
