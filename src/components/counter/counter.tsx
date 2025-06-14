@@ -7,7 +7,7 @@ export default function Counter() {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="m-16">
+      <div>
         <button
           className="bg-gray-600 text-white p-2 rounded-md text-[1.2em] mr-3 hover:bg-black"
           aria-label="Increment value"
