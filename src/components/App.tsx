@@ -1,8 +1,7 @@
-import * as React from "react";
-import Counter from '../features/counter/Counter'
+import Counter from "../features/counter/Counter";
 import { useGetPokemonByNameQuery } from "../services/pokemon";
 
-function App() {
+export default function App() {
   // Using a query hook to automatically fetches data and returns query values
   const { data, error, isLoading } = useGetPokemonByNameQuery("bulbasaur");
   return (
@@ -24,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App
