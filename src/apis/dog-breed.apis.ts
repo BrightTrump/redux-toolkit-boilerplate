@@ -7,7 +7,7 @@ const dogBreedApis = createApi({
   reducerPath: "dogBreedApis",
   baseQuery: baseQuery,
   endpoints: (builder) => ({
-    fetchDogBreed: builder.query<Breed[], void>({
+    fetchDogBreeds: builder.query<Breed[], void>({
       query: () => ({
         method: HttpMethods.GET,
         url: "/breed",
@@ -16,6 +16,6 @@ const dogBreedApis = createApi({
   }),
 });
 
-export const { useLazyFetchDogBreedQuery } = dogBreedApis;
+export const { useLazyFetchDogBreedsQuery } = dogBreedApis;
 
 export default dogBreedApis;
