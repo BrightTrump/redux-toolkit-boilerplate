@@ -10,7 +10,7 @@ const dogBreedApis = createApi({
     fetchDogBreeds: builder.query<Breed[], void>({
       query: () => ({
         method: HttpMethods.GET,
-        url: "/breed",
+        url: "/breed?limit",
       }),
     }),
   }),

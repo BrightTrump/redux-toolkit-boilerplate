@@ -1,16 +1,17 @@
 import { ErrorResponse } from "../@types/_index";
 import { useLazyFetchDogBreedsQuery } from "../apis/dog-breed.apis";
 import { useToast } from "../ui/_index";
+import { Breed } from "../@types/dog-breed.types";
 
 export default function useFetchBreeds() {
-  const [fetchBreeds, { data: isFetching }] = useLazyFetchDogBreedsQuery();
+  const [fetchBreeds, { data }] = useLazyFetchDogBreedsQuery();
   const { callToast } = useToast();
 
   const fetchData = async () => {
     const response = await fetchBreeds();
 
-    const error = response.error as ErrorResponse;
     if ("error" in response) {
+      const error = response.error as ErrorResponse;
       callToast({
         message: error.data?.detail || "Failed to fetch dog breeds",
         title: "Error",
@@ -19,11 +20,11 @@ export default function useFetchBreeds() {
       return;
     }
 
-    return response.data;
+    return response.data as Breed[];
   };
 
   return {
-    fetchData,
-    isFetching,
+    fetchBreedsData: data,
+    isFetching: fetchData,
   };
 }

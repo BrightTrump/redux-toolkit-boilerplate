@@ -1,4 +1,5 @@
 import Counter from "./counter/counter";
+import DogBreeds from "./dog-breeds/dog-breeds";
 import Pokemon from "./services/pokemon";
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
       <div className="grid gap-5 mx-auto place-items-center">
         <Counter />
         <Pokemon />
+        <DogBreeds />
       </div>
     </div>
   );
